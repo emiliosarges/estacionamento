@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: estacionamento-postgres
+
+    environment:
+      POSTGRES_DB: estacionamento
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - estacionamento-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  estacionamento-postgres-data:
