@@ -29,10 +29,11 @@ public class Vaga {
         //Spring exige construtor vazio
     }
 
-    public Vaga(UUID id, String numero, TipoVaga tipo, StatusVaga status) {
+    public Vaga(String numero, TipoVaga tipo) {
         this.id = id;
         this.numero = numero;
         this.tipo = tipo;
+        this.status = status.LIVRE;
     }
 
     public void ocupar(){
